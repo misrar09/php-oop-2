@@ -1,5 +1,6 @@
 <?php
 
+require __DIR__ . '/category.php';
 class Product
 {
     public $name;
@@ -10,7 +11,7 @@ class Product
     public $price;
 
 
-    public function __construct($name, $type, $category, $photo, $description, $price)
+    public function __construct($name, $type, Category $category, $photo, $description, $price)
     {
 
         $this->name = $name;
@@ -33,7 +34,7 @@ class Product
     }
     public function getCategory()
     {
-        return $this->category;
+        return $this->category->getCategoryName();
     }
 
     public function getPhoto()

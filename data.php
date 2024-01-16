@@ -7,37 +7,37 @@ $products = [
     new Product(
         'Cooked Fish',
         'Food',
-        'cat',
+        new Category('Cats Dogs'),
         '<img src ="https://picsum.photos/id/237/200/300"',
-        'this is a cat food',
+        'this is a cats and dogs food',
         5.00
     ),
 
     new Product(
-        'Cooked Fish',
-        'Food',
-        'cat',
+        'Cat House',
+        'House',
+        new Category('Cats'),
         '<img src ="https://picsum.photos/id/237/200/300"',
-        'this is a cat food',
-        5.00
+        'this is a Cat House',
+        50.00
     ),
 
     new Product(
-        'Cooked Fish',
-        'Food',
-        'cat',
+        'Dog House',
+        'House',
+        new Category('Dogs'),
         '<img src ="https://picsum.photos/id/237/200/300"',
-        'this is a cat food',
-        5.00
+        'this is a Dog House',
+        150.00
     ),
 
     new Product(
-        'Cooked Fish',
-        'Food',
-        'cat',
+        'Toy',
+        'Animal Toys',
+        new Category('Cats Dogs'),
         '<img src ="https://picsum.photos/id/237/200/300"',
-        'this is a cat food',
-        5.00
+        'these are animal toys',
+        8.00
     ),
 
 
