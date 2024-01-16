@@ -4,9 +4,8 @@ class Category
 {
     public $name;
 
-
-    public function getCategoryName()
+    public function __construct($name)
     {
-        return $this->name;
+        $this->name = $name;
     }
 }

@@ -7,7 +7,7 @@ $products = [
     new Product(
         'Cooked Fish',
         'Food',
-        new Category('Cats Dogs'),
+        new Category('Cats and Dogs'),
         '<img src ="https://picsum.photos/id/237/200/300"',
         'this is a cats and dogs food',
         5.00
@@ -34,7 +34,7 @@ $products = [
     new Product(
         'Toy',
         'Animal Toys',
-        new Category('Cats Dogs'),
+        new Category('Cats and Dogs'),
         '<img src ="https://picsum.photos/id/237/200/300"',
         'these are animal toys',
         8.00

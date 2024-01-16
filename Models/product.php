@@ -34,7 +34,7 @@ class Product
     }
     public function getCategory()
     {
-        return $this->category->getCategoryName();
+        return $this->category->name;
     }
 
     public function getPhoto()

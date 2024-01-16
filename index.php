@@ -2,9 +2,6 @@
 
 require __DIR__ . '/data.php';
 
-foreach ($products as $product) {
-    echo $product->getCategory();
-}
 ?>
 
 <!DOCTYPE html>
@@ -33,17 +30,17 @@ foreach ($products as $product) {
                             <h5 class="card-type">
                                 <?= $product->type ?>
                             </h5>
-                            <h5 class="card-type">
+                            <h5 class="card-description">
                                 <?= $product->description ?>
                             </h5>
-                            <h5 class="card-type">
+                            <h5 class="card-price">
                                 <?= $product->price . " &euro;" ?>
                             </h5>
                             <h5 class="card-type">
                                 <?= $product->photo ?>
                             </h5>
-                            <h6 class="card-subtitle mb-2 text-muted">
-                                <?= $product->category->name ?>
+                            <h6 class="card-category">
+                                Category: <?= $product->category->name ?>
                             </h6>
                         </div>
                     </div>
