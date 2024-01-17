@@ -50,13 +50,13 @@ require __DIR__ . '/data.php';
                                 Product Type: <strong><?= get_class($product) ?></strong>
                             </h6>
                             <h6 class="card-expiry">
-                                Expiry: <strong> <?= isset($product->expiry) ? $product->expiry : "-"  ?></strong>
+                                <strong> <?= isset($product->expiry) ? 'Expiry:' . " " . $product->expiry : ""  ?></strong>
                             </h6>
                             <h6 class="card-color">
-                                Color: <strong><?= isset($product->color) ? $product->color : "-" ?></strong>
+                                <strong><?= isset($product->color) ? 'Color:' . " " . $product->color : "" ?></strong>
                             </h6>
                             <h6 class="card-material">
-                                Material: <strong><?= isset($product->material) ? $product->material : "-" ?></strong>
+                                <strong><?= isset($product->material) ? 'Material:' . " " .  $product->material : "" ?></strong>
                             </h6>
                         </div>
                     </div>
