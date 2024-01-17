@@ -1,29 +1,29 @@
 <?php
 
-require __DIR__ . '/category.php';
+require_once __DIR__ . '/category.php';
+/* require_once __DIR__ . '/food.php';
+require_once __DIR__ . '/toy.php';
+require_once __DIR__ . '/kennel.php'; */
+
 class Product
 {
     public $name;
-    public $type;
     public $category;
     public $photo;
-    public $description;
     public $price;
 
 
-    public function __construct($name, $type, Category $category, $photo, $description, $price)
+    public function __construct($name, Category $category, $photo, $price)
     {
 
         $this->name = $name;
-        $this->type = $type;
         $this->category = $category;
         $this->photo = $photo;
-        $this->description = $description;
         $this->price = $price;
     }
 
 
-    public function getName()
+    /*     public function getName()
     {
         return $this->name;
     }
@@ -49,5 +49,5 @@ class Product
     public function getPrice()
     {
         return $this->price;
-    }
+    } */
 }

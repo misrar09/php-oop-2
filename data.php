@@ -1,43 +1,45 @@
 <?php
-require __DIR__ . '/Models/product.php';
+require_once __DIR__ . '/Models/product.php';
+require_once __DIR__ . '/Models/food.php';
+require_once __DIR__ . '/Models/toy.php';
+require_once __DIR__ . '/Models/kennel.php';
 
+
+$cats = new Category('Cats', 'This product is exclusivly for Cats');
+$dogs = new Category('Dogs', 'This product is excelusivly for Dogs');
 
 $products = [
 
-    new Product(
+    new Food(
         'Cooked Fish',
-        'Food',
-        new Category('Cats and Dogs'),
+        $cats,
         '<img src ="https://picsum.photos/id/237/200/300"',
-        'this is a cats and dogs food',
-        5.00
+        5.00,
+        '2025/05'
     ),
 
-    new Product(
+    new Kennel(
         'Cat House',
-        'House',
-        new Category('Cats'),
+        $cats,
         '<img src ="https://picsum.photos/id/237/200/300"',
-        'this is a Cat House',
-        50.00
+        50.00,
+        'Red'
     ),
 
-    new Product(
+    new Kennel(
         'Dog House',
-        'House',
-        new Category('Dogs'),
+        $dogs,
         '<img src ="https://picsum.photos/id/237/200/300"',
-        'this is a Dog House',
-        150.00
+        150.00,
+        'Green'
     ),
 
-    new Product(
+    new Toy(
         'Toy',
-        'Animal Toys',
-        new Category('Cats and Dogs'),
+        $dogs,
         '<img src ="https://picsum.photos/id/237/200/300"',
-        'these are animal toys',
-        8.00
+        8.00,
+        'Silicon'
     ),
 
 

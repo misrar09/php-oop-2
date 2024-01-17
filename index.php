@@ -17,7 +17,7 @@ require __DIR__ . '/data.php';
 <body>
     <div class="container">
         <div class="row">
-            <h2>Animal Food Planet</h2>
+            <h2>Animal Planet</h2>
         </div>
         <div class="row">
             <?php foreach ($products as $product) : ?>
@@ -27,20 +27,29 @@ require __DIR__ . '/data.php';
                             <h4 class="card-title">
                                 <?= $product->name ?>
                             </h4>
-                            <h5 class="card-type">
-                                <?= $product->type ?>
-                            </h5>
-                            <h5 class="card-description">
-                                <?= $product->description ?>
-                            </h5>
                             <h5 class="card-price">
-                                <?= $product->price . " &euro;" ?>
+                                <?= $product->price . "&euro;" ?>
                             </h5>
                             <h5 class="card-type">
                                 <?= $product->photo ?>
                             </h5>
                             <h6 class="card-category">
-                                Category: <?= $product->category->name ?>
+                                Category: <strong><?= $product->category->name ?></strong>
+                            </h6>
+                            <h6 class="card-category">
+                                <strong> <?= $product->category->description ?></strong>
+                            </h6>
+                            <h6 class="card-category">
+                                Product Type: <strong><?= get_class($product) ?></strong>
+                            </h6>
+                            <h6 class="card-expiry">
+                                Expiry: <strong> <?= isset($product->expiry) ? $product->expiry : "-"  ?></strong>
+                            </h6>
+                            <h6 class="card-color">
+                                Color: <strong><?= isset($product->color) ? $product->color : "-" ?></strong>
+                            </h6>
+                            <h6 class="card-material">
+                                Material: <strong><?= isset($product->material) ? $product->material : "-" ?></strong>
                             </h6>
                         </div>
                     </div>
