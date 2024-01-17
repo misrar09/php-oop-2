@@ -15,8 +15,8 @@ class Food extends Product
         $this->expiry = $expiry;
     }
 
-    public function applyAdditionalDiscount()
+    public function applyAdditionalDiscount($discountRate)
     {
-        $this->applyDiscount(10);
+        $this->applyDiscount($discountRate);
     }
 }
