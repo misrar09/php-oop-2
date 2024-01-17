@@ -28,7 +28,14 @@ require __DIR__ . '/data.php';
                                 <?= $product->name ?>
                             </h4>
                             <h5 class="card-price">
-                                <?= $product->price . "&euro;" ?>
+                                <?php
+                                if (property_exists($product, 'discount') && $product->discount > 0) {
+                                    echo $product->price - ($product->price * $product->discount / 100) . "&euro;";
+                                    echo " <small>(Discounted)</small>";
+                                } else {
+                                    echo $product->price . "&euro;";
+                                }
+                                ?>
                             </h5>
                             <h5 class="card-type">
                                 <?= $product->photo ?>

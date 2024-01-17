@@ -3,6 +3,7 @@ require_once __DIR__ . '/Models/product.php';
 require_once __DIR__ . '/Models/food.php';
 require_once __DIR__ . '/Models/toy.php';
 require_once __DIR__ . '/Models/kennel.php';
+require_once __DIR__ . '/Models/discount.php';
 
 
 $cats = new Category('Cats', 'This product is exclusivly for Cats');
@@ -46,3 +47,7 @@ $products = [
 
 
 ];
+
+
+$products[0]->applyAdditionalDiscount(5);
+$products[3]->applyAdditionalDiscount(10);
